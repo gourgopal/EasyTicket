@@ -181,13 +181,11 @@
         var app = angular.module('BlankApp', ['ngRoute', 'ngMaterial', 'ngMessages']);
         app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
             $routeProvider
-                .when('/', {
-                    templateUrl: 'index.html'
-                })
                 .when('/One', {
                     templateUrl: 'one.html',
                     controller: 'OneCtrl'
                 })
+                //.otherwise({ redirectTo: '/' });
             $locationProvider.html5Mode({
                 enabled: true,
                 requireBase: false
@@ -254,7 +252,7 @@
                 };
             });
     </script>
-    <script type="text/ng-template" id="/one.html">
+    <script type="text/ng-template" id="one.html">
         Content of the template.
     </script>
     <script>
