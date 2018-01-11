@@ -1,5 +1,6 @@
 ﻿<html lang="en">
 <head>
+    <base href="./">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="Content/angular-material.css">
@@ -9,21 +10,25 @@
             margin-bottom: 1rem;
             margin-top: 1rem;
         }
+
         h1 {
             font-size: 3.400rem;
             font-weight: 400;
             line-height: 4rem;
         }
+
         .site-sidenav, .site-sidenav.md-locked-open-add-active, .site-sidenav.md-locked-open {
             width: 272px;
             min-width: 272px;
             max-width: 272px;
         }
+
         .site-content-toolbar {
             background: #f6f6f6 !important;
             color: #202020 !important;
             z-index: 3;
         }
+
         .docs-menu, .docs-menu ul {
             list-style: none;
             padding: 0;
@@ -39,6 +44,7 @@
             margin: 0;
             padding: 0;
         }
+
         .nav-header {
             background-color: #106CC8;
             background: -webkit-linear-gradient(#185694, #106cc8);
@@ -48,12 +54,15 @@
             flex-shrink: 0;
             z-index: 2;
         }
+
         .docs-menu > li {
             border-bottom: 1px solid #267ED5;
         }
+
         .docs-menu li {
             margin: 0;
         }
+
         .menu-heading {
             display: block;
             line-height: 32px;
@@ -61,16 +70,19 @@
             width: 100%;
             color: rgba(255, 255, 255, 0.54);
         }
+
         .docs-toolbar-tools .md-button md-icon {
             color: #666 !important;
             fill: #666 !important;
         }
+
         .docs-logotype {
             color: indigo;
             text-align: center;
             font-weight: 400;
             font-size: 26px;
         }
+
         .docs-logo {
             text-align: center;
             display: -webkit-box;
@@ -86,21 +98,24 @@
             padding: 0 0 16px;
             margin: 0 auto;
         }
-        .docs-logo > img {
-            height: 150px;
-            width: auto;
-            display: block;
-            -webkit-transform-origin: 50% 0;
-            transform-origin: 50% 0;
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-        }
+
+            .docs-logo > img {
+                height: 150px;
+                width: auto;
+                display: block;
+                -webkit-transform-origin: 50% 0;
+                transform-origin: 50% 0;
+                -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+
         a {
             text-decoration: none;
             font-weight: 400;
             -webkit-transition: border-bottom 0.35s;
             transition: border-bottom 0.35s;
         }
+
         .material-icons.md-light {
             color: rgba(255, 255, 255, 1);
         }
@@ -143,249 +158,96 @@
                 <h2 flex md-truncate>MY APP</h2>
             </div>
         </md-toolbar>
-        <div class="md-padding" style="overflow-y:auto">
-            <md-content>
+        <div class="ng-view md-padding" style="overflow-y:auto">
 
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button>{{title1}}</md-button>
-                    <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
-                    <md-button ng-disabled="true" class="md-primary">Disabled</md-button>
-                    <md-button class="md-warn">{{title4}}</md-button>
-                    <div class="label">Flat</div>
-                </section>
-
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button class="md-raised">Button</md-button>
-                    <md-button class="md-raised md-primary">Primary</md-button>
-                    <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
-                    <md-button class="md-raised md-warn">Warn</md-button>
-                    <div class="label">Raised</div>
-                </section>
-
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button class="md-fab" aria-label="Eat cake">
-                        <md-icon>cake</md-icon>
-                    </md-button>
-
-                    <md-button class="md-fab md-primary" aria-label="Use Android">
-                        <md-icon>android</md-icon>
-                    </md-button>
-
-                    <md-button class="md-fab" ng-disabled="true" aria-label="Comment">
-                        <md-icon>ic_comment_24px</md-icon>
-                    </md-button>
-
-                    <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
-                        <md-icon>ic_people_24px</md-icon>
-                    </md-button>
-
-                    <md-button class="md-fab md-mini" aria-label="Eat cake">
-                        <md-icon>cake</md-icon>
-                    </md-button>
-
-                    <md-button class="md-fab md-mini md-primary" aria-label="Use Android">
-                        <md-icon style="color: greenyellow;">android</md-icon>
-                    </md-button>
-                    <div class="label">FAB</div>
-                </section>
-
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button ng-href="{{googleUrl}}" target="_blank">Default Link</md-button>
-                    <md-button class="md-primary" ng-href="{{googleUrl}}" target="_blank">Primary Link</md-button>
-
-                    <md-button>Default Button</md-button>
-                    <div class="label">Link vs. Button</div>
-                </section>
-
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button class="md-primary md-hue-1">Primary Hue 1</md-button>
-                    <md-button class="md-warn md-raised md-hue-2">Warn Hue 2</md-button>
-                    <md-button class="md-accent">Accent</md-button>
-                    <md-button class="md-accent md-raised md-hue-1">Accent Hue 1</md-button>
-                    <div class="label">Themed</div>
-                </section>
-
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button class="md-icon-button md-primary" aria-label="Settings">
-                        <md-icon>menu</md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button md-accent" aria-label="Favorite">
-                        <md-icon>favorite</md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button" aria-label="More">
-                        <md-icon>more_vert</md-icon>
-                    </md-button>
-                    <md-button href="http://google.com"
-                               title="Launch Google.com in new window"
-                               target="_blank"
-                               ng-disabled="true"
-                               aria-label="Google.com"
-                               class="md-icon-button launch">
-                        <md-icon>launch</md-icon>
-                    </md-button>
-                    <div class="label">Icon Button</div>
-                </section>
-            </md-content>
-            <md-content>
-
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button>{{title1}}</md-button>
-                    <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
-                    <md-button ng-disabled="true" class="md-primary">Disabled</md-button>
-                    <md-button class="md-warn">{{title4}}</md-button>
-                    <div class="label">Flat</div>
-                </section>
-
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button class="md-raised">Button</md-button>
-                    <md-button class="md-raised md-primary">Primary</md-button>
-                    <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
-                    <md-button class="md-raised md-warn">Warn</md-button>
-                    <div class="label">Raised</div>
-                </section>
-
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button class="md-fab" aria-label="Eat cake">
-                        <md-icon>cake</md-icon>
-                    </md-button>
-
-                    <md-button class="md-fab md-primary" aria-label="Use Android">
-                        <md-icon>android</md-icon>
-                    </md-button>
-
-                    <md-button class="md-fab" ng-disabled="true" aria-label="Comment">
-                        <md-icon>ic_comment_24px</md-icon>
-                    </md-button>
-
-                    <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
-                        <md-icon>ic_people_24px</md-icon>
-                    </md-button>
-
-                    <md-button class="md-fab md-mini" aria-label="Eat cake">
-                        <md-icon>cake</md-icon>
-                    </md-button>
-
-                    <md-button class="md-fab md-mini md-primary" aria-label="Use Android">
-                        <md-icon style="color: greenyellow;">android</md-icon>
-                    </md-button>
-                    <div class="label">FAB</div>
-                </section>
-
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button ng-href="{{googleUrl}}" target="_blank">Default Link</md-button>
-                    <md-button class="md-primary" ng-href="{{googleUrl}}" target="_blank">Primary Link</md-button>
-
-                    <md-button>Default Button</md-button>
-                    <div class="label">Link vs. Button</div>
-                </section>
-
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button class="md-primary md-hue-1">Primary Hue 1</md-button>
-                    <md-button class="md-warn md-raised md-hue-2">Warn Hue 2</md-button>
-                    <md-button class="md-accent">Accent</md-button>
-                    <md-button class="md-accent md-raised md-hue-1">Accent Hue 1</md-button>
-                    <div class="label">Themed</div>
-                </section>
-
-                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                    <md-button class="md-icon-button md-primary" aria-label="Settings">
-                        <md-icon>menu</md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button md-accent" aria-label="Favorite">
-                        <md-icon>favorite</md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button" aria-label="More">
-                        <md-icon>more_vert</md-icon>
-                    </md-button>
-                    <md-button href="http://google.com"
-                               title="Launch Google.com in new window"
-                               target="_blank"
-                               ng-disabled="true"
-                               aria-label="Google.com"
-                               class="md-icon-button launch">
-                        <md-icon>launch</md-icon>
-                    </md-button>
-                    <div class="label">Icon Button</div>
-                </section>
-            </md-content>
         </div>
     </div>
 
-        <!--
-                  Your HTML content here
-                -->
-        <!-- Angular Material requires Angular.js Libraries -->
-        <script src="Scripts/angular.js"></script>
-        <script src="Scripts/angular-animate.js"></script>
-        <script src="Scripts/angular-aria.js"></script>
-        <script src="Scripts/angular-messages.js"></script>
+    <!--
+              Your HTML content here
+            -->
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-aria.js"></script>
+    <script src="Scripts/angular-messages.js"></script>
 
-        <!-- Angular Material Library -->
-        <script src="Scripts/angular-material.js"></script>
+    <!-- Angular Material Library -->
+    <script src="Scripts/angular-material.js"></script>
 
-        <!-- Your application bootstrap  -->
-        <script type="text/javascript">
-            angular.module('BlankApp', ['ngMaterial', 'ngMessages']).controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log) {
-                $scope.toggleLeft = buildDelayedToggler('left');
-                $scope.isOpenRight = function () {
-                    return $mdSidenav('right').isOpen();
+    <!-- Your application bootstrap  -->
+    <script type="text/javascript">
+        var app = angular.module('BlankApp', ['ngRoute', 'ngMaterial', 'ngMessages']);
+        app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+            $routeProvider
+                .when('/One', {
+                    templateUrl: 'one.html',
+                    controller: 'OneCtrl'
+                })
+            $locationProvider.html5Mode(true);
+        }]);
+        app.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+            $scope.toggleLeft = buildDelayedToggler('left');
+            $scope.isOpenRight = function () {
+                return $mdSidenav('right').isOpen();
+            };
+
+            /**
+             * Supplies a function that will continue to operate until the
+             * time is up.
+             */
+            function debounce(func, wait, context) {
+                var timer;
+
+                return function debounced() {
+                    var context = $scope,
+                        args = Array.prototype.slice.call(arguments);
+                    $timeout.cancel(timer);
+                    timer = $timeout(function () {
+                        timer = undefined;
+                        func.apply(context, args);
+                    }, wait || 10);
                 };
+            }
 
-                /**
-                 * Supplies a function that will continue to operate until the
-                 * time is up.
-                 */
-                function debounce(func, wait, context) {
-                    var timer;
+            /**
+             * Build handler to open/close a SideNav; when animation finishes
+             * report completion in console
+             */
+            function buildDelayedToggler(navID) {
+                return debounce(function () {
+                    // Component lookup should always be available since we are not using `ng-if`
+                    $mdSidenav(navID)
+                        .toggle()
+                        .then(function () {
+                            $log.debug("toggle " + navID + " is done");
+                        });
+                }, 200);
+            }
 
-                    return function debounced() {
-                        var context = $scope,
-                            args = Array.prototype.slice.call(arguments);
-                        $timeout.cancel(timer);
-                        timer = $timeout(function () {
-                            timer = undefined;
-                            func.apply(context, args);
-                        }, wait || 10);
-                    };
-                }
+            function buildToggler(navID) {
+                return function () {
+                    // Component lookup should always be available since we are not using `ng-if`
+                    $mdSidenav(navID)
+                        .toggle()
+                        .then(function () {
+                            $log.debug("toggle " + navID + " is done");
+                        });
+                };
+            }
+        })
+            .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+                $scope.close = function () {
+                    // Component lookup should always be available since we are not using `ng-if`
+                    $mdSidenav('left').close()
+                        .then(function () {
+                            $log.debug("close LEFT is done");
+                        });
 
-                /**
-                 * Build handler to open/close a SideNav; when animation finishes
-                 * report completion in console
-                 */
-                function buildDelayedToggler(navID) {
-                    return debounce(function () {
-                        // Component lookup should always be available since we are not using `ng-if`
-                        $mdSidenav(navID)
-                            .toggle()
-                            .then(function () {
-                                $log.debug("toggle " + navID + " is done");
-                            });
-                    }, 200);
-                }
-
-                function buildToggler(navID) {
-                    return function () {
-                        // Component lookup should always be available since we are not using `ng-if`
-                        $mdSidenav(navID)
-                            .toggle()
-                            .then(function () {
-                                $log.debug("toggle " + navID + " is done");
-                            });
-                    };
-                }
-            })
-                .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
-                    $scope.close = function () {
-                        // Component lookup should always be available since we are not using `ng-if`
-                        $mdSidenav('left').close()
-                            .then(function () {
-                                $log.debug("close LEFT is done");
-                            });
-
-                    };
-                });
-        </script>
+                };
+            });
+    </script>
 
 </body>
 </html>
